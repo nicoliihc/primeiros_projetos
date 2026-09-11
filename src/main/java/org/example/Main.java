@@ -9,15 +9,14 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o preço do produto: ");
-        double preco = entrada.nextDouble();
+        System.out.println("Digite um valor em reais: ");
+        double reais = entrada.nextDouble();
 
 
-        double desconto = preco * 0.15;
-        double valorf = preco - desconto;
+        double dolar = reais * 5.11;
 
 
-        System.out.println("O valor final do produto com o desconto é de: " + valorf + " reais");
+        System.out.println("O valor convertido em dólares é: " + dolar + "$");
 
     }
 }

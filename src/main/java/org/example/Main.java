@@ -9,18 +9,15 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o valor da altura do retângulo: ");
-        double h = entrada.nextDouble();
+        System.out.println("Digite o preço do produto: ");
+        double preco = entrada.nextDouble();
 
 
-        System.out.println("Digite o valor da base do retângulo: ");
-        double b = entrada.nextDouble();
+        double desconto = preco * 0.15;
+        double valorf = preco - desconto;
 
 
-        double perimetro = (h * 2) + (b * 2) ;
-
-
-        System.out.println("O perímetro do retângulo é: " + perimetro);
+        System.out.println("O valor final do produto com o desconto é de: " + valorf + " reais");
 
     }
 }

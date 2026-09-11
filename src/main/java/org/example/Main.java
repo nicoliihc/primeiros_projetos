@@ -9,14 +9,21 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o valor do raio do círculo: ");
-        double raio = entrada.nextDouble();
+        System.out.println("Digite o valor de A: ");
+        double a = entrada.nextDouble();
 
 
-        double area = Math.PI * (raio * raio);
+        System.out.println("Digite o valor de B: ");
+        double b = entrada.nextDouble();
 
 
-        System.out.println("A área do círculo é: " + area );
+        double c = a;
+        a = b;
+        b = c;
+
+
+        System.out.println("Novo valor de A: " + a);
+        System.out.println("Novo valor de B: " + b);
 
     }
 }

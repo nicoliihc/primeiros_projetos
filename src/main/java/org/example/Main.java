@@ -9,25 +9,18 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.print("Digite o capital inicial: ");
-        double C = entrada.nextDouble();
+        System.out.print("Digite o total de segundos: ");
+        int totalSeg = entrada.nextInt();
 
 
-        System.out.print("Digite a taxa de juros mensal em %: ");
-        double i = entrada.nextDouble();
+        int hrs = totalSeg / 3600;
+        int resto = totalSeg % 3600;
+        int min = resto / 60;
+        int seg = resto % 60;
 
 
-        System.out.print("Digite o tempo em meses: ");
-        int t = entrada.nextInt();
+        System.out.println(hrs + " horas, " + min + " minutos e " + seg + " segundos");
 
-
-        double porcentagem = i / 100;
-        double juros = C * porcentagem * t;
-        double montante = C + juros;
-
-
-        System.out.printf("Juros gerados: R$" + juros + "\n");
-        System.out.printf("Montante final: R$" + montante);
 
     }
 }

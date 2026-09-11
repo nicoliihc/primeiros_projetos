@@ -9,14 +9,18 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite um valor em reais: ");
-        double reais = entrada.nextDouble();
+        System.out.println("Digite o valor da distância percorrida (em km): ");
+        double km = entrada.nextDouble();
 
 
-        double dolar = reais * 5.11;
+        System.out.println("Digite o valor do combústivel gasto (em litros): ");
+        double l = entrada.nextDouble();
 
 
-        System.out.println("O valor convertido em dólares é: " + dolar + "$");
+        double consumomedio = km / l;
+
+
+        System.out.println("O valor do consumo médio é de: " + consumomedio + "km/l");
 
     }
 }

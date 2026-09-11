@@ -7,20 +7,27 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Digite o primeiro número (dividendo): ");
-        int a = entrada.nextInt();
 
 
-        System.out.print("Digite o segundo número (divisor): ");
-        int b = entrada.nextInt();
+        System.out.print("Digite o capital inicial: ");
+        double C = entrada.nextDouble();
 
 
-        int quociente = a / b;
-        int resto = a % b;
+        System.out.print("Digite a taxa de juros mensal em %: ");
+        double i = entrada.nextDouble();
 
 
-        System.out.println("Quociente da divisão inteira: " + quociente);
-        System.out.println("Resto da divisão: " + resto);
+        System.out.print("Digite o tempo em meses: ");
+        int t = entrada.nextInt();
+
+
+        double porcentagem = i / 100;
+        double juros = C * porcentagem * t;
+        double montante = C + juros;
+
+
+        System.out.printf("Juros gerados: R$" + juros + "\n");
+        System.out.printf("Montante final: R$" + montante);
 
     }
 }

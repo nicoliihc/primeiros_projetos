@@ -1,19 +1,30 @@
 package org.example;
-//Descrição do Commit modificada
+
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-
-        boolean b1, b2, b3;
-        b1 = true;
-        b2 = true;
-        b3 = true;
-
-        boolean resultado = b1 && b2 && !b3;
+        Scanner entrada = new Scanner(System.in);
+        int n1, n2, n3;
 
 
-        System.out.println("Resultado: " + resultado);
+        //Entrada de dados
+        System.out.print("Informe a primeira nota: ");
+        n1 = entrada.nextInt();
+        System.out.print("Informe a segunda nota: ");
+        n2 = entrada.nextInt();
+        System.out.print("Informe a terceira nota: ");
+        n3 = entrada.nextInt();
+
+
+        // Cálculo
+        double media = (double)(n1 + n2 + n3 ) / 3;
+
+
+        System.out.print("Nota média: " + media);
+
 
 
 

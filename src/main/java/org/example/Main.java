@@ -8,19 +8,20 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Qual é o valor investido pelo cliente? ");
-        double investimento = entrada.nextDouble();
+        System.out.println("Qual é o valor da renda mensal do cliente? ");
+        double renda = entrada.nextDouble();
 
-        if (investimento <= 10000){
-            System.out.println("O valor do investimento está na categoria BRONZE");
-        }else if (investimento > 10000 && investimento <= 50000){
-            System.out.println("O valor do investimento está na categoria PRATA");
-        }else if (investimento > 50000 && investimento <= 100000) {
-            System.out.println("O valor do investimento está na categoria OURO");
-        }else if (investimento > 100000) {
-            System.out.println("O valor do investimento está na categoria PLATINUM");
+        System.out.println("Qual é o valor do score de crédito do cliente? ");
+        double score = entrada.nextDouble();
+
+        if (renda >= 8000 && score >= 700){
+            System.out.println("O cartão Premium foi aprovado");
+        }else if (renda < 8000 && score >= 700){
+            System.out.println("O cartão Premium foi negado, valor de renda mensal insuficiente");
+        }else if (renda >= 8000 && score < 700) {
+            System.out.println("O cartão Premium foi negado, valor de pontos do Score insuficiente");
         }else{
-            System.out.println("O valor não possui uma determinada categoria");
+            System.out.println("O cartão Premium foi negado, valores insuficientes");
         }
 
     }

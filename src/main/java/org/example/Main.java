@@ -7,25 +7,16 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
-        int n1, n2, n3;
 
 
-        //Entrada de dados
-        System.out.print("Informe a primeira nota: ");
-        n1 = entrada.nextInt();
-        System.out.print("Informe a segunda nota: ");
-        n2 = entrada.nextInt();
-        System.out.print("Informe a terceira nota: ");
-        n3 = entrada.nextInt();
+        System.out.println("Digite a temperatura em graus celsius: ");
+        double C = entrada.nextDouble();
 
 
-        // Cálculo
-        double media = (double)(n1 + n2 + n3 ) / 3;
+        double F = ( C * 9/5) + 32;
 
 
-        System.out.print("Nota média: " + media);
-
-
+        System.out.println("A temperatura em Fahrenheit é: " + F);
 
 
     }

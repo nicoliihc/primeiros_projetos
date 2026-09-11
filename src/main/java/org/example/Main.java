@@ -5,13 +5,18 @@ package org.example;
 public class Main {
     static void main() {
 
-        short varShort = 10;
-        int varInt = varShort;
-        byte varByte = (byte) varInt;
+        int a, b;
+        a = 10;
+        b = 5;
 
-        System.out.println("Valor Short: " + varShort);
-        System.out.println("Valor Int: " + varInt);
-        System.out.println("Valor Byte: " + varByte);
+        boolean maior = a > b;
+
+        System.out.println("'a' maior que 'b'? R:  " + maior);
+        System.out.println("'a' menor que 'b'? R:  " + (a < b));
+        System.out.println("'a' maior ou igual que 'b'? R:  " + (a >= b));
+        System.out.println("'a' menor ou igual que 'b'? R:  " + (a <= b));
+        System.out.println("'a' igual que 'b'? R:  " + (a == b));
+        System.out.println("'a' diferente que 'b'? R:  " + (a != b));
 
 
     }

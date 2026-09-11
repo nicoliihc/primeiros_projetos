@@ -8,13 +8,14 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Digite o valor do seu Salário: ");
-        int salario = entrada.nextInt();
+        System.out.println("Informe o tempo de contratação, em meses, de seu funcionário: ");
+        int meses = entrada.nextInt();
 
-        if (salario <= 4000){
-            System.out.println("Você POSSUI direito ao Vale Refeição");
+        if (meses >= 3){
+            System.out.println("O plano de saúde está DISPONÍVEL");
         }else{
-            System.out.println("Você NÃO possui direito ao Vale Refeição");
+            System.out.println("O plano de saúde NÂO está disponível");
         }
+
     }
 }

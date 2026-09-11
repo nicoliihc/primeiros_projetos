@@ -9,18 +9,14 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o valor da hora trabalhada: ");
-        double valor = entrada.nextDouble();
+        System.out.println("Digite o valor do raio do círculo: ");
+        double raio = entrada.nextDouble();
 
 
-        System.out.println("Digite o número de horas trabalhadas no mês: ");
-        int horas = entrada.nextInt();
+        double area = Math.PI * (raio * raio);
 
 
-        double salario = valor * horas;
-
-
-        System.out.println("O salário bruto é de: " + salario + " reais");
+        System.out.println("A área do círculo é: " + area );
 
     }
 }

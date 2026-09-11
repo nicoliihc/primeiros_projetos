@@ -5,14 +5,14 @@ package org.example;
 public class Main {
     static void main() {
 
-        float varFloat = 250.10f;
-        long varLong = (long) varFloat;
-        double varDouble = varLong;
+        short varShort = 10;
+        int varInt = varShort;
+        byte varByte = (byte) varInt;
 
+        System.out.println("Valor Short: " + varShort);
+        System.out.println("Valor Int: " + varInt);
+        System.out.println("Valor Byte: " + varByte);
 
-        System.out.println("Valor Float: " + varFloat);
-        System.out.println("Valor Long: " + varLong);
-        System.out.println("Valor Double: " + varDouble);
 
     }
 }

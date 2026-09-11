@@ -7,20 +7,17 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+        System.out.print("Digite o valor em metros: ");
+        double m = entrada.nextDouble();
 
 
-        System.out.print("Digite seu peso (kg): ");
-        double peso = entrada.nextDouble();
+        double cm = m * 100;
+        double mm = m * 1000;
 
 
-        System.out.print("Digite sua altura (ex: 1.75): ");
-        double altura = entrada.nextDouble();
+        System.out.println("Centímetros: " + cm + "cm");
+        System.out.println("Milímetros: " + mm + "mm");
 
-
-        double imc = peso / (altura * altura);
-
-
-        System.out.println("Seu IMC é: " + imc);
 
 
     }

@@ -9,15 +9,14 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite a temperatura em graus celsius: ");
-        double C = entrada.nextDouble();
+        System.out.println("Digite o valor do lado do quadrado: ");
+        double lado = entrada.nextDouble();
 
 
-        double F = ( C * 9/5) + 32;
+        double area = lado * lado ;
 
 
-        System.out.println("A temperatura em Fahrenheit é: " + F);
-
+        System.out.println("A área do quadrado é: " + area);
 
     }
 }

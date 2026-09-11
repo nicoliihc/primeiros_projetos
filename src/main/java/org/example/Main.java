@@ -9,14 +9,18 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o valor do lado do quadrado: ");
-        double lado = entrada.nextDouble();
+        System.out.println("Digite o valor da altura do retângulo: ");
+        double h = entrada.nextDouble();
 
 
-        double area = lado * lado ;
+        System.out.println("Digite o valor da base do retângulo: ");
+        double b = entrada.nextDouble();
 
 
-        System.out.println("A área do quadrado é: " + area);
+        double perimetro = (h * 2) + (b * 2) ;
+
+
+        System.out.println("O perímetro do retângulo é: " + perimetro);
 
     }
 }

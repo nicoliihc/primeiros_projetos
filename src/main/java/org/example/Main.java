@@ -8,14 +8,16 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("O funcionário utiliza veículo próprio para trabalhar? ");
-        String resp = entrada.nextLine();
+        System.out.println("Qual é o cargo do funcionário? ");
+        String cargo = entrada.nextLine();
 
-        if (resp.equalsIgnoreCase("s")) {
-            System.out.println("Ele PODE solicitar o auxílio combustível");
-        } else {
-            System.out.println("Ele NÃO pode solicitar o auxílio combustível");
+        if (cargo.equalsIgnoreCase("administrativo")) {
+            System.out.println("O funcionário pode participar do programa de idiomas");
+        } else if (cargo.equalsIgnoreCase("liderança")  ||
+                cargo.equalsIgnoreCase("lideranca")){
+            System.out.println("O funcionário pode participar do programa de idiomas");
+        }else {
+            System.out.println("Ele não pode participar do programa");
         }
-
     }
 }

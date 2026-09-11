@@ -7,14 +7,13 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite a sua nota: ");
+        double nota = entrada.nextDouble();
 
-        System.out.println("Qual é a sua idade? ");
-        int idade = entrada.nextInt();
-
-        if (idade >= 18){
-            System.out.println("Maior de idade");
+        if (nota >= 7){
+            System.out.println("Aprovado");
         }else {
-            System.out.println("Menor de idade");
+            System.out.println("Reprovado");
         }
     }
 }

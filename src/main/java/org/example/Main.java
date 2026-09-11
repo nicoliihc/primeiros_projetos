@@ -8,13 +8,13 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Informe o tempo de contratação, em meses, de seu funcionário: ");
-        int meses = entrada.nextInt();
+        System.out.println("O funcionário utiliza veículo próprio para trabalhar? ");
+        String resp = entrada.nextLine();
 
-        if (meses >= 3){
-            System.out.println("O plano de saúde está DISPONÍVEL");
-        }else{
-            System.out.println("O plano de saúde NÂO está disponível");
+        if (resp.equalsIgnoreCase("s")) {
+            System.out.println("Ele PODE solicitar o auxílio combustível");
+        } else {
+            System.out.println("Ele NÃO pode solicitar o auxílio combustível");
         }
 
     }

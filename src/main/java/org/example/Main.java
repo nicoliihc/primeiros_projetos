@@ -5,18 +5,16 @@ package org.example;
 public class Main {
     static void main() {
 
-        int a, b;
-        a = 10;
-        b = 5;
+        boolean b1, b2, b3;
+        b1 = true;
+        b2 = true;
+        b3 = true;
 
-        boolean maior = a > b;
+        boolean resultado = b1 && b2 && !b3;
 
-        System.out.println("'a' maior que 'b'? R:  " + maior);
-        System.out.println("'a' menor que 'b'? R:  " + (a < b));
-        System.out.println("'a' maior ou igual que 'b'? R:  " + (a >= b));
-        System.out.println("'a' menor ou igual que 'b'? R:  " + (a <= b));
-        System.out.println("'a' igual que 'b'? R:  " + (a == b));
-        System.out.println("'a' diferente que 'b'? R:  " + (a != b));
+
+        System.out.println("Resultado: " + resultado);
+
 
 
     }

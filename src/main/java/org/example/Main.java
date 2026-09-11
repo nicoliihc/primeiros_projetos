@@ -8,17 +8,19 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Qual é o valor do salário do cliente? ");
-        double salario = entrada.nextDouble();
-        System.out.println("Qual é o valor da parcela desejada? ");
-        double parcela = entrada.nextDouble();
+        System.out.println("Qual é o valor investido pelo cliente? ");
+        double investimento = entrada.nextDouble();
 
-        double porc = (salario/100) * 30;
-
-        if (parcela <= porc){
-            System.out.println("O empréstimo foi aprovado");
+        if (investimento <= 10000){
+            System.out.println("O valor do investimento está na categoria BRONZE");
+        }else if (investimento > 10000 && investimento <= 50000){
+            System.out.println("O valor do investimento está na categoria PRATA");
+        }else if (investimento > 50000 && investimento <= 100000) {
+            System.out.println("O valor do investimento está na categoria OURO");
+        }else if (investimento > 100000) {
+            System.out.println("O valor do investimento está na categoria PLATINUM");
         }else{
-            System.out.println("O empréstimo foi recusado");
+            System.out.println("O valor não possui uma determinada categoria");
         }
 
     }

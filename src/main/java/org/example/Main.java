@@ -7,15 +7,16 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Qual é o valor do saldo médio mensal do cliente? ");
+        double saldo = entrada.nextDouble();
 
-        System.out.println("Qual é o valor da transação? ");
-        double transacao = entrada.nextDouble();
-
-        if (transacao > 10000){
-            System.out.println("Detecção de Transação Suspeita! A transação deve ser analisada");
-        }else {
-            System.out.println("Transação OK");
+        if (saldo >= 5000){
+            System.out.println("O Cliente possui direito à isenção de tarifa bancária");
+        }else{
+            System.out.println("O Cliente NÃO possui direito à isenção de tarifa bancária. A tarifa será mantida");
         }
+
+
 
     }
 }

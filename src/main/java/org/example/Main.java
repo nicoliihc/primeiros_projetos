@@ -8,19 +8,13 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
+        System.out.println("Qual é a sua idade? ");
+        int idade = entrada.nextInt();
 
-        System.out.print("Digite o total de segundos: ");
-        int totalSeg = entrada.nextInt();
-
-
-        int hrs = totalSeg / 3600;
-        int resto = totalSeg % 3600;
-        int min = resto / 60;
-        int seg = resto % 60;
-
-
-        System.out.println(hrs + " horas, " + min + " minutos e " + seg + " segundos");
-
-
+        if (idade >= 18){
+            System.out.println("Maior de idade");
+        }else {
+            System.out.println("Menor de idade");
+        }
     }
 }

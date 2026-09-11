@@ -9,21 +9,19 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
 
 
-        System.out.println("Digite o valor de A: ");
-        double a = entrada.nextDouble();
+        System.out.print("Digite seu peso (kg): ");
+        double peso = entrada.nextDouble();
 
 
-        System.out.println("Digite o valor de B: ");
-        double b = entrada.nextDouble();
+        System.out.print("Digite sua altura (ex: 1.75): ");
+        double altura = entrada.nextDouble();
 
 
-        double c = a;
-        a = b;
-        b = c;
+        double imc = peso / (altura * altura);
 
 
-        System.out.println("Novo valor de A: " + a);
-        System.out.println("Novo valor de B: " + b);
+        System.out.println("Seu IMC é: " + imc);
+
 
     }
 }

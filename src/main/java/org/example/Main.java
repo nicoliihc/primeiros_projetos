@@ -8,20 +8,13 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Qual é o valor da renda mensal do cliente? ");
-        double renda = entrada.nextDouble();
+        System.out.println("Qual é o valor da transação? ");
+        double transacao = entrada.nextDouble();
 
-        System.out.println("Qual é o valor do score de crédito do cliente? ");
-        double score = entrada.nextDouble();
-
-        if (renda >= 8000 && score >= 700){
-            System.out.println("O cartão Premium foi aprovado");
-        }else if (renda < 8000 && score >= 700){
-            System.out.println("O cartão Premium foi negado, valor de renda mensal insuficiente");
-        }else if (renda >= 8000 && score < 700) {
-            System.out.println("O cartão Premium foi negado, valor de pontos do Score insuficiente");
-        }else{
-            System.out.println("O cartão Premium foi negado, valores insuficientes");
+        if (transacao > 10000){
+            System.out.println("Detecção de Transação Suspeita! A transação deve ser analisada");
+        }else {
+            System.out.println("Transação OK");
         }
 
     }

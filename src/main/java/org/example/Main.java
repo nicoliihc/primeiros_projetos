@@ -8,16 +8,18 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Qual é o cargo do funcionário? ");
-        String cargo = entrada.nextLine();
+        System.out.println("Qual é o valor do salário do cliente? ");
+        double salario = entrada.nextDouble();
+        System.out.println("Qual é o valor da parcela desejada? ");
+        double parcela = entrada.nextDouble();
 
-        if (cargo.equalsIgnoreCase("administrativo")) {
-            System.out.println("O funcionário pode participar do programa de idiomas");
-        } else if (cargo.equalsIgnoreCase("liderança")  ||
-                cargo.equalsIgnoreCase("lideranca")){
-            System.out.println("O funcionário pode participar do programa de idiomas");
-        }else {
-            System.out.println("Ele não pode participar do programa");
+        double porc = (salario/100) * 30;
+
+        if (parcela <= porc){
+            System.out.println("O empréstimo foi aprovado");
+        }else{
+            System.out.println("O empréstimo foi recusado");
         }
+
     }
 }

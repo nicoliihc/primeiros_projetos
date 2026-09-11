@@ -7,18 +7,20 @@ import java.util.Scanner;
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Digite o valor em metros: ");
-        double m = entrada.nextDouble();
+        System.out.print("Digite o primeiro número (dividendo): ");
+        int a = entrada.nextInt();
 
 
-        double cm = m * 100;
-        double mm = m * 1000;
+        System.out.print("Digite o segundo número (divisor): ");
+        int b = entrada.nextInt();
 
 
-        System.out.println("Centímetros: " + cm + "cm");
-        System.out.println("Milímetros: " + mm + "mm");
+        int quociente = a / b;
+        int resto = a % b;
 
 
+        System.out.println("Quociente da divisão inteira: " + quociente);
+        System.out.println("Resto da divisão: " + resto);
 
     }
 }

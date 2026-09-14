@@ -6,12 +6,9 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        Scanner entrada = new Scanner(System.in);
 
-        for (int contador = 1; contador <= 10; contador++){
-            System.out.println("Registre o seu nome: ");
-            String nome = entrada.nextLine();
-            System.out.println(nome + " está registrado como participante " + contador);
+        for (int peca = 1; peca <= 20; peca++){
+            System.out.println("Peça " + peca + " produzida");
         }
 
     }

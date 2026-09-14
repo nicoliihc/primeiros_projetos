@@ -8,14 +8,14 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        double venda, soma = 0;
+        int nota, contador = 0;
 
-        for (int contador = 1; contador <= 5; contador++){
-            System.out.println("Informe o valor da venda: ");
-            venda = entrada.nextDouble();
-            soma += venda;
+        while (contador < 10){
+            contador++;
+            System.out.println("Cliente n." + contador + ", avalie a nossa loja");
+            nota = entrada.nextInt();
         }
-        System.out.println("O total é de R$ " + soma);
+        System.out.println(contador + " clientes avaliaram a nossa loja ");
 
     }
 }

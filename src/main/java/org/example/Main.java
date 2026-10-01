@@ -8,35 +8,13 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        double total = 0.0;
-        double valor = 0.0;
+        for (int i = 1; i <= 15; i++) {
+            System.out.print("Digite o nome do Produto recebido (" + i + "/15): ");
+            String produto = entrada.nextLine();
 
-        System.out.println("\n--- Registro de Vendas ---");
-        System.out.println("Registre o valor do produto: ");
-        valor = entrada.nextDouble();
-        total+=valor;
-
-        System.out.println("""
-                        \nSelecione uma opção: 
-                        1 - Continuar
-                        2 - Encerrar""");
-        int opcao = entrada.nextInt();
-
-        while (opcao == 1 ) {
-            System.out.println("\nRegistre o valor do produto: ");
-            valor = entrada.nextDouble();
-            total += valor;
-
-            System.out.println("""
-                        \nSelecione uma opção: 
-                        1 - Continuar
-                        2 - Encerrar""");
-            opcao = entrada.nextInt();
+            System.out.println("Produto conferido: " + produto);
         }
 
-        System.out.println("""
-                        \nOperação encerrada!
-                        Total: """ + total + "reais");
-
+        System.out.println("Conferência de 15 produtos recebidos!");
     }
 }

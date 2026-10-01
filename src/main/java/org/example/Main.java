@@ -8,14 +8,35 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        int nota, contador = 0;
+        double total = 0.0;
+        double valor = 0.0;
 
-        while (contador < 10){
-            contador++;
-            System.out.println("Cliente n." + contador + ", avalie a nossa loja");
-            nota = entrada.nextInt();
+        System.out.println("\n--- Registro de Vendas ---");
+        System.out.println("Registre o valor do produto: ");
+        valor = entrada.nextDouble();
+        total+=valor;
+
+        System.out.println("""
+                        \nSelecione uma opção: 
+                        1 - Continuar
+                        2 - Encerrar""");
+        int opcao = entrada.nextInt();
+
+        while (opcao == 1 ) {
+            System.out.println("\nRegistre o valor do produto: ");
+            valor = entrada.nextDouble();
+            total += valor;
+
+            System.out.println("""
+                        \nSelecione uma opção: 
+                        1 - Continuar
+                        2 - Encerrar""");
+            opcao = entrada.nextInt();
         }
-        System.out.println(contador + " clientes avaliaram a nossa loja ");
+
+        System.out.println("""
+                        \nOperação encerrada!
+                        Total: """ + total + "reais");
 
     }
 }

@@ -2,19 +2,34 @@ package org.example;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        for (int i = 1; i <= 15; i++) {
-            System.out.print("Digite o nome do Produto recebido (" + i + "/15): ");
-            String produto = entrada.nextLine();
+        int vendas = 0;
+        double total = 0;
 
-            System.out.println("Produto conferido: " + produto);
+        System.out.println("""
+            \nEscolha uma opção: 
+            1 - Registrar venda
+            2 - Encerrar sistema """);
+        int opcao = entrada.nextInt();
+
+        while (opcao == 1) {
+            System.out.println("Digite o valor da venda: ");
+            double venda = entrada.nextDouble();
+
+            total += venda;
+            vendas++;
+
+            System.out.println("""
+            Deseja continuar?
+            1 - Sim
+            2 - Não""");
+            opcao = entrada.nextInt();
         }
 
-        System.out.println("Conferência de 15 produtos recebidos!");
+        System.out.println("Total de vendas: " + vendas);
+        System.out.println("Faturamento total: R$ " + total);
     }
 }

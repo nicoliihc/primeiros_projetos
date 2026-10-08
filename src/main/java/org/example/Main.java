@@ -6,19 +6,21 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        int[]setores  = new int[12];
-        double num = 0.0;
-        int setor = 0;
+        int[] talhao = new int[5];
+        int soma = 0;
 
-        for(int i = 0; i < setores.length; i++) {
-            System.out.println("Registre o valor do consumo de água do setor " + (i + 1) + ":");
-            setores[i] = entrada.nextInt();
-            if (setores[i] > num){
-                num = setores[i];
-                setor = (i + 1);
-            }
+        for (int i = 0; i < talhao.length; i++) {
+            System.out.println("Registre a produção de hortaliças do talhão " + (i + 1) + ":");
+            talhao[i] = entrada.nextInt();
+            soma += talhao[i];
         }
 
-        System.out.println("\nO setor que mais consumiu água foi: " + setor);
+        System.out.println("\nProdução Individual de cada Talhão: ");
+        for (int c = 0; c < talhao.length; c++) {
+            System.out.println("Talhão " + (c + 1) + ": " + talhao[c]);
+        }
+
+        System.out.println("\nProdução total: " + soma);
+
     }
 }

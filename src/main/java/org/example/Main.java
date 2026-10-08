@@ -6,20 +6,19 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        int acima30 = 0;
+        int[]setores  = new int[12];
+        double num = 0.0;
+        int setor = 0;
 
-
-        double[]temperatura  = new double[10];
-
-
-        for(int i = 0; i < 10; i++) {
-            System.out.println("Registre a temperatura medida hoje " + (i +1) + "/10:");
-            temperatura[i] = entrada.nextDouble();
-            if (temperatura[i] > 30.0){
-                acima30 ++;
+        for(int i = 0; i < setores.length; i++) {
+            System.out.println("Registre o valor do consumo de água do setor " + (i + 1) + ":");
+            setores[i] = entrada.nextInt();
+            if (setores[i] > num){
+                num = setores[i];
+                setor = (i + 1);
             }
         }
-        System.out.println("\nDias com temperatura acima de 30°C: " + acima30);
 
+        System.out.println("\nO setor que mais consumiu água foi: " + setor);
     }
 }

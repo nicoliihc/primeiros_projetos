@@ -6,21 +6,17 @@ public class Main {
     static void main() {
         Scanner entrada = new Scanner(System.in);
 
-        int[] talhao = new int[5];
-        int soma = 0;
+        int inf40 = 0;
 
-        for (int i = 0; i < talhao.length; i++) {
-            System.out.println("Registre a produção de hortaliças do talhão " + (i + 1) + ":");
-            talhao[i] = entrada.nextInt();
-            soma += talhao[i];
+        double[]sensor  = new double[8];
+
+        for(int i = 0; i < sensor.length; i++) {
+            System.out.println("Registre a umidade do solo da Área " + (i +1) + ":");
+            sensor[i] = entrada.nextDouble();
+            if (sensor[i] < 40.0){
+                inf40++;
+            }
         }
-
-        System.out.println("\nProdução Individual de cada Talhão: ");
-        for (int c = 0; c < talhao.length; c++) {
-            System.out.println("Talhão " + (c + 1) + ": " + talhao[c]);
-        }
-
-        System.out.println("\nProdução total: " + soma);
-
+        System.out.println("\n" + (inf40) + " área(s) possuem umidade inferior a 40%");
     }
 }
